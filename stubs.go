@@ -36,10 +36,6 @@ func (p *ProducerMock) ProduceChannel() chan *kafka.Message {
 	return nil
 }
 
-func (p *ProducerMock) Purge(flags int) error {
-	return nil
-}
-
 func (p * ProducerMock) QueryWatermarkOffsets(topic string, partition int32, timeoutMs int) (low, high int64, err error) {
 	return 0, 0, nil
 }

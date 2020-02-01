@@ -15,7 +15,6 @@ type Producer interface {
 	OffsetsForTimes(times []kafka.TopicPartition, timeoutMs int) (offsets []kafka.TopicPartition, err error)
 	Produce(msg *kafka.Message, deliveryChan chan kafka.Event) error
 	ProduceChannel() chan *kafka.Message
-	Purge(flags int) error
 	QueryWatermarkOffsets(topic string, partition int32, timeoutMs int) (low, high int64, err error)
 	SetOAuthBearerToken(oauthBearerToken kafka.OAuthBearerToken) error
 	SetOAuthBearerTokenFailure(errstr string) error
