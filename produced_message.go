@@ -3,8 +3,8 @@ package kafkamock
 import (
 	"bytes"
 	"encoding/json"
+	"github.com/confluentinc/confluent-kafka-go/kafka"
 	"testing"
-	"gopkg.in/confluentinc/confluent-kafka-go.v1/kafka"
 )
 
 type ProducerMessage struct {
